@@ -1,7 +1,7 @@
 streamlit
 crewai==0.11.2
-langchain
-langchain-openai
-openai
+langchain==0.1.13
+langchain-openai==0.0.8
+openai==1.14.3
 tiktoken==0.5.2
-setuptools
+setuptools==68.2.2
