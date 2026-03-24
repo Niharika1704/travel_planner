@@ -12,12 +12,12 @@ def create_agent(api_key: str) -> Agent:
     llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=api_key)
 
    city_expert = Agent(
-    role="city expert",
-    goal="Provide detailed information about the city, including attractions, local culture, and dining options.",
-    backstory="You are a seasoned travel expert with deep knowledge of cities worldwide, their culture, hidden gems, and the best dining experiences.",
-    verbose=True,
-    llm=llm
-)
+        role="city expert",
+        goal="Provide detailed information about the city, including attractions, local culture, and dining options.",
+        backstory="You are a seasoned travel expert with deep knowledge of cities worldwide, their culture, hidden gems, and the best dining experiences.",
+        verbose=True,
+        llm=llm
+    )
     
    
     iterary_expert = Agent(
