@@ -70,8 +70,7 @@ def generate_trip_plan(api_key, destination, start_date, end_date, interests):
 #sidebar 
 with st.sidebar:
     st.header("confiuration")
-    api_key = st.text_input("OPENAI_API_KEY","")or st.text_input("OPENAI_API_KEY(required)",type="password")
-
+    api_key = st.text_input("OpenAI API Key", type="password")
 #main UI
 st.title("AI Trip Planner")
 st.markdown("Plan your next trip with the help of AI! Enter your destination, travel dates, and interests to get a personalized itinerary.")
@@ -83,7 +82,6 @@ with col1:
     destination = st.text_input("Destination", value="Paris")
     start_date = st.date_input("Start Date", value=datetime.now().date() + timedelta(days=30))
     end_date = st.date_input("End Date", value=datetime.now().date() + timedelta(days=37))
-    interests = st.multiselect("Interests", options=["Culture", "Food", "Nature"])  
     st.info(f"trip duration: {(end_date - start_date).days + 1} days")
 
 with col2:
