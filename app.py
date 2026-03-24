@@ -62,7 +62,7 @@ def generate_trip_plan(api_key, destination, start_date, end_date, interests):
         "start_date": start_date,
         "end_date": end_date,
         "interests": interests,
-        "itinerary": iterary_expert.output
+         "itinerary": str(result)
     }
     
     return trip_plan
