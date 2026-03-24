@@ -3,3 +3,4 @@ crewai==0.11.2
 langchain
 langchain-openai
 openai
+tiktoken==0.5.2
