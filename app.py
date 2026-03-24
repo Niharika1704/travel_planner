@@ -8,18 +8,17 @@ st.set_page_config(page_title="AI trip planner", page_icon="🤖",layout="wide")
 
 st.session_state.setdefault("trip_plan", None)
 
-def create_agent(api_key: str) -> Agent:
+def create_agent(api_key: str):
     llm = ChatOpenAI(model="gpt-3.5-turbo", api_key=api_key)
 
-   city_expert = Agent(
+    city_expert = Agent(
         role="city expert",
         goal="Provide detailed information about the city, including attractions, local culture, and dining options.",
         backstory="You are a seasoned travel expert with deep knowledge of cities worldwide, their culture, hidden gems, and the best dining experiences.",
         verbose=True,
         llm=llm
     )
-    
-   
+
     iterary_expert = Agent(
         role="iterary expert",
         goal="Create a detailed day-by-day itinerary for the trip, including activities, dining, and transportation.",
@@ -27,7 +26,8 @@ def create_agent(api_key: str) -> Agent:
         verbose=True,
         llm=llm
     )
-    return city_expert, iterary_expert  
+
+    return city_expert, iterary_expert
 
 def create_tasks(city_expert, iterary_expert, destination, start_date, end_date, interests):
     duration = (end_date - start_date).days + 1
