@@ -5,3 +5,4 @@ langchain-openai==0.0.8
 openai==1.14.3
 tiktoken==0.5.2
 setuptools==68.2.2
+
