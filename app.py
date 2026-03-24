@@ -55,7 +55,7 @@ def generate_trip_plan(api_key, destination, start_date, end_date, interests):
     tasks = create_tasks(city_expert, iterary_expert, destination, start_date, end_date, interests)
     
     crew = Crew(agents=[city_expert, iterary_expert], tasks=tasks)
-    crew.execute()
+    crew.kickoff()
     
     trip_plan = {
         "destination": destination,
