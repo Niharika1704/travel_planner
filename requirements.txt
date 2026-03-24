@@ -4,3 +4,4 @@ langchain
 langchain-openai
 openai
 tiktoken==0.5.2
+setuptools
